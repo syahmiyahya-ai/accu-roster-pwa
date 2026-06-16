@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#174ea6">
+  <meta name="color-scheme" content="light">
+  <title>ACCU Roster</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" aria-label="ACCU Roster">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-name">ACCU Roster</span>
+    </div>
+    <div class="actions">
+      <button id="installButton" class="icon-button hidden" type="button" title="Install app" aria-label="Install app">
+        <span aria-hidden="true">+</span>
+      </button>
+      <button id="reloadButton" class="icon-button" type="button" title="Reload roster" aria-label="Reload roster">
+        <span aria-hidden="true">↻</span>
+      </button>
+      <a id="openExternal" class="icon-button" href="#" target="_blank" rel="noopener" title="Open in browser" aria-label="Open in browser">
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section id="setupPanel" class="setup-panel" hidden>
+      <form id="targetForm" class="target-form">
+        <label for="targetUrl">Roster web app URL</label>
+        <div class="url-row">
+          <input id="targetUrl" type="url" inputmode="url" autocomplete="url" placeholder="https://script.google.com/macros/s/.../exec" required>
+          <button class="primary-button" type="submit">Save</button>
+        </div>
+        <p id="formMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+
+    <section id="frameShell" class="frame-shell" aria-label="Roster portal">
+      <div id="emptyState" class="empty-state">
+        <h1>ACCU Roster</h1>
+        <p>Add the current Apps Script web app URL to open the roster as an installable app.</p>
+      </div>
+      <iframe id="rosterFrame" title="ACCU Roster Portal" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div id="offlineState" class="offline-state" hidden>
+        <h1>Offline</h1>
+        <p>The app shell is available. Reconnect to load the live roster.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./config.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>

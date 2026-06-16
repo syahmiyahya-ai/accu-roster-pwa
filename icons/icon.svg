@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="ACCU Roster">
+  <rect width="512" height="512" rx="96" fill="#174ea6"/>
+  <path d="M108 150c0-28 22-50 50-50h196c28 0 50 22 50 50v214c0 28-22 50-50 50H158c-28 0-50-22-50-50V150Z" fill="#fff"/>
+  <path d="M108 168h296v62H108v-62Z" fill="#087f83"/>
+  <path d="M164 286h54v54h-54v-54Zm74 0h54v54h-54v-54Zm74 0h54v54h-54v-54ZM164 214h54v54h-54v-54Zm74 0h54v54h-54v-54Zm74 0h54v54h-54v-54Z" fill="#d8dee9"/>
+  <path d="M168 97h44v78h-44V97Zm132 0h44v78h-44V97Z" fill="#d94f2b"/>
+  <path d="M153 385h206" stroke="#174ea6" stroke-width="28" stroke-linecap="round"/>
+</svg>

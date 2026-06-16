@@ -1,0 +1,21 @@
+{
+  "name": "ACCU Roster",
+  "short_name": "ACCU Roster",
+  "description": "Installable ACCU roster portal shell.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "background_color": "#f6f7fb",
+  "theme_color": "#174ea6",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
