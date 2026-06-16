@@ -13,7 +13,6 @@
   const installButton = document.getElementById("installButton");
   let deferredInstallPrompt = null;
   let currentTarget = "";
-  let hasTargetLoaded = false;
 
   function queryTarget() {
     const params = new URLSearchParams(window.location.search);
@@ -63,21 +62,14 @@
     setupPanel.hidden = !show;
   }
 
-  function updateOnlineState() {
-    const offline = !navigator.onLine;
-    offlineState.hidden = !offline || hasTargetLoaded;
-  }
-
   function loadTarget(url) {
     currentTarget = withDefaultPage(url);
-    hasTargetLoaded = false;
     frame.src = currentTarget;
     openExternal.href = currentTarget;
     input.value = url;
     emptyState.hidden = true;
     offlineState.hidden = true;
     showSetup(false);
-    updateOnlineState();
   }
 
   function initializeTarget() {
@@ -119,7 +111,6 @@
 
   reloadButton.addEventListener("click", () => {
     if (currentTarget) {
-      hasTargetLoaded = false;
       offlineState.hidden = true;
       frame.src = currentTarget;
     } else {
@@ -128,11 +119,7 @@
     }
   });
 
-  window.addEventListener("online", updateOnlineState);
-  window.addEventListener("offline", updateOnlineState);
-
   frame.addEventListener("load", () => {
-    hasTargetLoaded = true;
     offlineState.hidden = true;
   });
 
