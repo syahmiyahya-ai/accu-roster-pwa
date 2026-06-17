@@ -1,4 +1,4 @@
-const CACHE_NAME = "accu-roster-pwa-v4";
+const CACHE_NAME = "accu-roster-pwa-v5";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -6,6 +6,9 @@ const APP_SHELL = [
   "./config.js",
   "./app.js",
   "./manifest.webmanifest",
+  "./icons/accu-logo-180.png",
+  "./icons/accu-logo-192.png",
+  "./icons/accu-logo-512.png",
   "./icons/icon.svg"
 ];
 
