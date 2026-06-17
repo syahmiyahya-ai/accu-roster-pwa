@@ -1,0 +1,6 @@
+Install ACCU Roster on your phone:
+https://syahmiyahya-ai.github.io/accu-roster-pwa/?v=12
+
+iPhone: open in Safari > Share > Add to Home Screen.
+Android: open in Chrome > three dots > Install app / Add to Home screen.
+If you see 403 or the old app, delete the old Home Screen icon and install again from this v12 link.
