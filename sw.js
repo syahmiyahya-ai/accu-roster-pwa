@@ -1,14 +1,15 @@
-const CACHE_NAME = "accu-roster-pwa-v7";
+const CACHE_NAME = "accu-roster-pwa-v8";
 const APP_SHELL = [
-  "./?v=7",
-  "./index.html?v=7",
-  "./styles.css?v=7",
-  "./config.js?v=7",
-  "./app.js?v=7",
-  "./manifest.webmanifest?v=7",
-  "./icons/accu-logo-180.png?v=7",
-  "./icons/accu-logo-192.png?v=7",
-  "./icons/accu-logo-512.png?v=7",
+  "./?v=8",
+  "./index.html?v=8",
+  "./styles.css?v=8",
+  "./config.js?v=8",
+  "./app.js?v=8",
+  "./manifest.webmanifest?v=8",
+  "./icons/rostar-icon-180.png?v=8",
+  "./icons/rostar-icon-192.png?v=8",
+  "./icons/rostar-icon-512.png?v=8",
+  "./icons/rostar-thumbnail.png?v=8",
   "./icons/icon.svg"
 ];
 
@@ -42,8 +43,8 @@ self.addEventListener("fetch", event => {
         return response;
       })
       .catch(() => {
-        if (event.request.mode === "navigate") return caches.match("./?v=7");
-        return caches.match(event.request).then(cached => cached || caches.match("./?v=7"));
+        if (event.request.mode === "navigate") return caches.match("./?v=8");
+        return caches.match(event.request).then(cached => cached || caches.match("./?v=8"));
       })
   );
 });
