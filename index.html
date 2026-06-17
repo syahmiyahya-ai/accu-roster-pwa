@@ -9,17 +9,21 @@
   <meta name="apple-mobile-web-app-title" content="ACCU Roster">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>ACCU Roster</title>
-  <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="icon" href="./icons/accu-logo-192.png" sizes="192x192" type="image/png">
-  <link rel="icon" href="./icons/accu-logo-512.png" sizes="512x512" type="image/png">
-  <link rel="apple-touch-icon" href="./icons/accu-logo-180.png">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="manifest" href="./manifest.webmanifest?v=7">
+  <link rel="icon" href="./icons/accu-logo-192.png?v=7" sizes="192x192" type="image/png">
+  <link rel="icon" href="./icons/accu-logo-512.png?v=7" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="./icons/accu-logo-180.png?v=7">
+  <link rel="stylesheet" href="./styles.css?v=7">
+  <style>
+    .brand-mark img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    [hidden] { display: none !important; }
+  </style>
 </head>
 <body>
   <header class="topbar">
     <div class="brand" aria-label="ACCU Roster">
       <span class="brand-mark" aria-hidden="true">
-        <img src="./icons/accu-logo-192.png" alt="">
+        <img src="./icons/accu-logo-192.png?v=7" alt="">
       </span>
       <span class="brand-name">ACCU Roster</span>
     </div>
@@ -28,10 +32,10 @@
         <span aria-hidden="true">+</span>
       </button>
       <button id="reloadButton" class="icon-button" type="button" title="Reload roster" aria-label="Reload roster">
-        <span aria-hidden="true">↻</span>
+        <span aria-hidden="true">R</span>
       </button>
-      <a id="openExternal" class="icon-button" href="#" target="_blank" rel="noopener" title="Open in browser" aria-label="Open in browser">
-        <span aria-hidden="true">↗</span>
+      <a id="openExternal" class="icon-button" href="https://script.google.com/macros/s/AKfycby6Ma-niAgsCJDbDYdEN-aBR8p85uOq2FEOR5I68pa3XfGp2_aO50bCj1x3NClnBMd5/exec?page=calendar" target="_blank" rel="noopener" title="Open in browser" aria-label="Open in browser">
+        <span aria-hidden="true">&gt;</span>
       </a>
     </div>
   </header>
@@ -49,11 +53,11 @@
     </section>
 
     <section id="frameShell" class="frame-shell" aria-label="Roster portal">
-      <div id="emptyState" class="empty-state">
+      <div id="emptyState" class="empty-state" hidden>
         <h1>ACCU Roster</h1>
         <p>Add the current Apps Script web app URL to open the roster as an installable app.</p>
       </div>
-      <iframe id="rosterFrame" title="ACCU Roster Portal" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe id="rosterFrame" title="ACCU Roster Portal" referrerpolicy="no-referrer-when-downgrade" src="https://script.google.com/macros/s/AKfycby6Ma-niAgsCJDbDYdEN-aBR8p85uOq2FEOR5I68pa3XfGp2_aO50bCj1x3NClnBMd5/exec?page=calendar"></iframe>
       <div id="offlineState" class="offline-state" hidden>
         <h1>Offline</h1>
         <p>The app shell is available. Reconnect to load the live roster.</p>
@@ -61,7 +65,7 @@
     </section>
   </main>
 
-  <script src="./config.js"></script>
-  <script src="./app.js" defer></script>
+  <script src="./config.js?v=7"></script>
+  <script src="./app.js?v=7" defer></script>
 </body>
 </html>
