@@ -1,5 +1,5 @@
 (function () {
-  const FALLBACK_TARGET_URL = "https://script.google.com/macros/s/AKfycby6Ma-niAgsCJDbDYdEN-aBR8p85uOq2FEOR5I68pa3XfGp2_aO50bCj1x3NClnBMd5/exec";
+  const FALLBACK_TARGET_URL = "https://script.google.com/macros/s/AKfycbxZc5LL3wd1-6sKwbIXwZltkJrEdJdLVCYkJcNQ4XIi1eBF9XBrhbFabE3EFvpM9vQo/exec";
   const CONFIG = window.ACCU_PWA_CONFIG || {};
   const STORAGE_KEY = "accuRosterTargetUrl";
   const frame = document.getElementById("rosterFrame");
