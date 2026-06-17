@@ -3,7 +3,7 @@
   "short_name": "ACCU Roster",
   "description": "Installable ACCU roster portal shell.",
   "id": "./",
-  "start_url": "./?v=5",
+  "start_url": "./?v=6",
   "scope": "./",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "browser"],
