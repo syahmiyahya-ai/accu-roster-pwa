@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b105f">
+  <title>Install ACCU Roster</title>
+  <meta name="description" content="How to add ACCU Roster PWA to iPhone and Android home screens.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #25143f;
+      --muted: #665d78;
+      --purple: #5b2bbf;
+      --teal: #087f83;
+      --paper: #fbf9ff;
+      --card: #ffffff;
+      --line: #dfd5ef;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+    }
+    main {
+      width: min(920px, 100%);
+      margin: 0 auto;
+      padding: 22px 16px 36px;
+    }
+    .hero {
+      display: grid;
+      gap: 12px;
+      justify-items: center;
+      text-align: center;
+      padding: 8px 0 18px;
+    }
+    .logo {
+      width: 108px;
+      height: 108px;
+      border-radius: 24px;
+      box-shadow: 0 10px 24px rgba(43, 16, 95, .16);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 8vw, 56px);
+      line-height: 1.05;
+    }
+    p { margin: 0; }
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .actions {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .button {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: var(--purple);
+      color: #fff;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+    }
+    .button.secondary {
+      color: var(--purple);
+      background: #eee7ff;
+    }
+    .poster {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 14px 32px rgba(43, 16, 95, .12);
+    }
+    .grid {
+      display: grid;
+      gap: 14px;
+      margin: 18px 0;
+    }
+    .card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+    }
+    ol {
+      margin: 0;
+      padding-left: 24px;
+    }
+    li { margin: 8px 0; }
+    .note {
+      padding: 16px;
+      border: 1px solid #f0c47d;
+      border-radius: 16px;
+      background: #fff8eb;
+      color: #704006;
+      font-weight: 700;
+    }
+    .linkbox {
+      margin-top: 12px;
+      padding: 12px;
+      overflow-wrap: anywhere;
+      border-radius: 12px;
+      background: #eee7ff;
+      color: var(--purple);
+      font-weight: 800;
+    }
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      .actions { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <img class="logo" src="../icons/rostar-icon-192.png?v=12" alt="ACCU Roster icon">
+      <h1>Install ACCU Roster</h1>
+      <p class="lead">Add the roster app to your phone Home Screen.</p>
+    </section>
+
+    <div class="actions">
+      <a class="button" href="../?v=12">Open ACCU Roster PWA</a>
+      <a class="button secondary" href="./ACCU-Roster-PWA-install-tutorial-v12.png">Open poster image</a>
+    </div>
+
+    <img class="poster" src="./ACCU-Roster-PWA-install-tutorial-v12.png" alt="ACCU Roster PWA install tutorial poster">
+
+    <section class="grid">
+      <div class="card">
+        <h2>iPhone / iPad</h2>
+        <ol>
+          <li>Open Safari.</li>
+          <li>Open the ACCU Roster PWA link.</li>
+          <li>Tap Share.</li>
+          <li>Tap Add to Home Screen.</li>
+          <li>Name it ACCU Roster and tap Add.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h2>Android</h2>
+        <ol>
+          <li>Open Chrome.</li>
+          <li>Open the ACCU Roster PWA link.</li>
+          <li>Tap the three-dot menu.</li>
+          <li>Tap Install app or Add to Home screen.</li>
+          <li>Name it ACCU Roster and tap Install/Add.</li>
+        </ol>
+      </div>
+    </section>
+
+    <p class="note">If you see 403 or the old app, delete the old Home Screen icon first. Then install again from the v12 link.</p>
+    <p class="linkbox">https://syahmiyahya-ai.github.io/accu-roster-pwa/?v=12</p>
+  </main>
+</body>
+</html>
