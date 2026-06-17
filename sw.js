@@ -1,15 +1,15 @@
-const CACHE_NAME = "accu-roster-pwa-v9";
+const CACHE_NAME = "accu-roster-pwa-v10";
 const APP_SHELL = [
-  "./?v=9",
-  "./index.html?v=9",
-  "./styles.css?v=9",
-  "./config.js?v=9",
-  "./app.js?v=9",
-  "./manifest.webmanifest?v=9",
-  "./icons/rostar-icon-180.png?v=9",
-  "./icons/rostar-icon-192.png?v=9",
-  "./icons/rostar-icon-512.png?v=9",
-  "./icons/rostar-thumbnail.png?v=9",
+  "./?v=10",
+  "./index.html?v=10",
+  "./styles.css?v=10",
+  "./config.js?v=10",
+  "./app.js?v=10",
+  "./manifest.webmanifest?v=10",
+  "./icons/rostar-icon-180.png?v=10",
+  "./icons/rostar-icon-192.png?v=10",
+  "./icons/rostar-icon-512.png?v=10",
+  "./icons/rostar-thumbnail.png?v=10",
   "./icons/icon.svg"
 ];
 
@@ -43,8 +43,8 @@ self.addEventListener("fetch", event => {
         return response;
       })
       .catch(() => {
-        if (event.request.mode === "navigate") return caches.match("./?v=9");
-        return caches.match(event.request).then(cached => cached || caches.match("./?v=9"));
+        if (event.request.mode === "navigate") return caches.match("./?v=10");
+        return caches.match(event.request).then(cached => cached || caches.match("./?v=10"));
       })
   );
 });
