@@ -6,6 +6,8 @@
   const setupPanel = document.getElementById("setupPanel");
   const emptyState = document.getElementById("emptyState");
   const offlineState = document.getElementById("offlineState");
+  const launchState = document.getElementById("launchState");
+  const launchButton = document.getElementById("launchButton");
   const form = document.getElementById("targetForm");
   const input = document.getElementById("targetUrl");
   const formMessage = document.getElementById("formMessage");
@@ -63,14 +65,27 @@
     setupPanel.hidden = !show;
   }
 
+  function shouldOpenRosterImmediately() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("open") === "1" ||
+      window.matchMedia("(display-mode: standalone)").matches ||
+      window.navigator.standalone === true;
+  }
+
   function loadTarget(url) {
     currentTarget = withDefaultPage(url);
-    frame.src = currentTarget;
     openExternal.href = currentTarget;
+    launchButton.href = currentTarget;
     input.value = url;
     emptyState.hidden = true;
     offlineState.hidden = true;
+    if (frame) frame.hidden = true;
     showSetup(false);
+    if (shouldOpenRosterImmediately()) {
+      window.location.replace(currentTarget);
+    } else {
+      launchState.hidden = false;
+    }
   }
 
   function initializeTarget() {
@@ -114,7 +129,7 @@
   reloadButton.addEventListener("click", () => {
     if (currentTarget) {
       offlineState.hidden = true;
-      frame.src = currentTarget;
+      window.location.href = currentTarget;
     } else {
       showSetup(true);
       input.focus();

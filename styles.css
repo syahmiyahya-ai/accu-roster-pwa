@@ -199,6 +199,65 @@ a:focus {
   background: #f9fafb;
 }
 
+.launch-state {
+  min-height: 100dvh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 14px;
+  padding: 28px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(124, 77, 255, .14), transparent 250px),
+    radial-gradient(circle at 86% 88%, rgba(8, 127, 131, .12), transparent 300px),
+    #fbf9ff;
+}
+
+.launch-logo {
+  width: 112px;
+  height: 112px;
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(43, 16, 95, .16);
+}
+
+.launch-state h1 {
+  margin: 8px 0 0;
+  font-size: clamp(34px, 9vw, 58px);
+  line-height: 1.05;
+  color: #25143f;
+}
+
+.launch-state p {
+  max-width: 420px;
+  margin: 0;
+  color: #665d78;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.launch-state small {
+  max-width: 420px;
+  color: #665d78;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.launch-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: min(320px, 100%);
+  min-height: 52px;
+  margin-top: 8px;
+  padding: 0 22px;
+  border-radius: 16px;
+  color: #fff;
+  background: #5b2bbf;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(91, 43, 191, .24);
+}
+
 iframe {
   position: absolute;
   inset: 0;
